@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% include 'include/header.html' %}
+{% endblock header %}
+
+{% block content %}
+
+{% for reserv in reserv %}
+
+    <div class="servises_wrap">
+        <div class="container">
+            <div class="col-md-12">
+                <h1 style="text-transform:uppercase;text-align:center;padding:80px;color:#757575;font-weight:100;">{{reserv.name}}</h1>
+            </div>
+            <span style="color:#757575;">{{reserv.content}}</span>
+            <div class="col-md-12">
+
+                <center style="padding:50px 0;">
+                    <form class="form" style="float:none!important; "  action="{% url 'reserv_form' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form_text">
+                             <center>
+                        <p>зарезервировать</p>
+                        <h2>Сделайте запись</h2>
+                            </center>
+                    </div>
+                      <div class="group">
+                        <input type="text" name="name" placeholder="Имя">
+                      </div>
+                      <div class="group">
+                        <input type="text" name="phone" placeholder="Номер телефона">
+                      </div>
+                      <div class="group">
+                        <input type="date" name="time" style="color:#696969;" placeholder="На какое число">
+
+                      </div>
+                      <div class="group">
+                        <input type="text" name="description" placeholder="Доп.инфо(не обязательно)">
+                      </div>
+
+                      <button type="submit" class="button buttonBlue">Отправить
+                        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                      </button>
+                   </form>
+                </center>
+
+            </div>
+        </div>
+    </div>
+
+{% endfor %}
+{% endblock content %}

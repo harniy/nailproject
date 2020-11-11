@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block header %}
+{% include 'include/header.html' %}
+{% endblock header %}
+
+{% block content %}
+
+{% for about in about %}
+<section>
+    <div class="servises_wrap">
+        <div class="container">
+            <div class="col-md-12">
+                <h1 style="text-transform:uppercase;text-align:center;padding:80px;color:#757575;font-weight:100;">{{about.description}}</h1>
+            </div>
+            <span style="color:#757575;">{{about.content | safe}}</span>
+        </div>
+
+    </div>
+</section>
+{% endfor %}
+{% endblock content %}

@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+{% include 'include/header.html' %}
+{% endblock header %}
+
+{% block content %}
+
+
+<div class="servises_wrap">
+    <div class="container">
+        <div class="col-md-12">
+            <h1 style="text-transform:uppercase;text-align:center;padding:80px;color:#3d3e3f;">Услуги</h1>
+            <div class="row">
+            <div class="col-md-3">
+                <h3 style="text-transform: uppercase;font-size:1.3rem;color:#555;">Название</h3>
+                <ul class="service_price">
+                    {% for price in services.pricelist_set.all %}
+                    <li style="padding: 0 20px;">{{ price.name }}</li>
+                    <hr>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3 style="text-transform: uppercase;font-size:1.3rem;color:#555;text-align:center;">Описание</h3>
+             <ul class="service_price">
+                    {% for price in services.pricelist_set.all %}
+                    <li style="padding: 0 20px;">{{ price.description }}</li>
+                    <hr>
+                    {% endfor %}
+             </ul>
+            </div>
+            <div class="col-md-3">
+                <h3 style="text-transform: uppercase;font-size:1.3rem;color:#555;text-align:center;">цена</h3>
+                <ul class="service_price" style="text-align:center;">
+                    {% for price in services.pricelist_set.all %}
+                    <li style="padding: 0 20px;">{{ price.cash }}</li>
+                    <hr>
+                    {% endfor %}
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

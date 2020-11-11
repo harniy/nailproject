@@ -1,0 +1,488 @@
+
+section {
+    height: 700px;
+    background: rgba(0, 0, 0, 0.01);
+}
+.header {
+    background-color: rgba(0,0,0,0.5);
+}
+@media(max-width: 640px) {
+    .nav li a{
+    font-size: 2rem!important;
+    }
+    .logo{
+    text-align:center!important;
+    font-size: 3rem!important;
+    width:100%;
+    }
+    .head_info{
+    padding-top:0px!important;
+    }
+    .h-title{
+    display:none!important;
+    }
+    .h-soc{
+    padding-top: 50px!important;
+    }
+    .form{
+    margin-top:0!important;
+    }
+    form{
+    width: 100%!important;
+    }
+    h3{
+    font-size:2rem!important;
+    }
+    p{
+    font-size:1.5rem!important;
+    }
+    .seс_insta{
+    display:none;
+    }
+    .f-wrap{
+    display:block!important;
+    }
+    .footer-left{
+    height:200px!important;
+    }
+    .footer-logo{
+    text-align:center!important;
+    }
+    .footer-social span{
+    display:none!important;
+    }
+    .footer_soc {
+    margin-left:20%!important;
+    }
+    .footer-left{
+    border-right:none!important;
+    }
+    .hyde {
+    display:none!important;
+    }
+    .footer_list{
+    text-align:center!important;
+    }
+    .h-descr{
+    font-size:4rem!important;
+    }
+}
+@media(max-width:1366px) {
+
+}
+.navbar {
+    width: 90%;
+    margin: auto;
+}
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #f9f9f9;
+
+}
+.bg {
+    background-image: url('../images/bg1.jpg');
+    background-position:center;
+    height: 700px;
+}
+
+
+.nav {
+    display:flex;
+    float: right;
+}
+.nav li {
+    padding: 0 20px;
+}
+.nav li a {
+    font-size: 1.1rem;
+    color: #f9f9f9;
+}
+.nav li a:hover {
+
+    text-decoration: none;
+    border-bottom: 2px solid #f8f8f8f8;
+}
+.head_info {
+    padding-top: 150px;
+}
+/* toggle menu */
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  margin-right: 20px;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #696969 !important;
+  padding: 10px 16px;
+  font-size: 0.9rem !important;
+  text-decoration: none !important;
+  display: block;
+  transition: 0.5s all ease;
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background: rgba(0, 0, 0, 0.04);
+    transition: 0.4s all ease;
+    border-bottom: none !important;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;   transition: 0.5s all ease;
+}
+
+
+
+.h-title {
+    font-family: 'Spectral SC', serif;
+    font-size: 20px;
+}
+
+.h-descr{
+    font-family: 'Russo One', sans-serif;
+    font-weight:bold;
+    font-size:4.5rem;
+}
+.h-content {
+    width: 90%;
+    color: #171717c2;
+}
+.h-soc {
+    list-style: none;
+    display: flex;
+    float:right;
+    padding-top: 120px;
+}
+.h-soc img {
+    width: 45px;
+    height: auto;
+}
+.h-soc a {
+    padding: 0 10px;
+}
+
+/* body reserv */
+
+#body_reserv {
+    height: 700px;
+    background: rgba(0, 0, 0, 0.01);
+}
+
+.body_center {
+    padding: 80px 0;
+}
+.form {
+    float: left;
+    position: relative;
+    z-index: 200;
+    margin-top: 20px;
+}
+
+.form_text p {
+    font-size: 14px;
+    color : #636363;
+    margin-bottom: 5px;
+}
+.form_text h2 {
+    padding-bottom: 10px;
+}
+
+.img_wrap {
+    height: 400px;
+}
+
+.img_wrap img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 100;
+    left: 322px;
+}
+
+
+
+form {
+	width: 380px;
+	padding: 3em 2em 2em 2em;
+    background: #fff;
+    border: 1px solid #ebebeb;
+	box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+
+}
+
+.group {
+	position: relative;
+	margin-bottom: 45px;
+}
+
+input {
+	font-size: 18px;
+	padding: 10px 10px 10px 5px;
+	-webkit-appearance: none;
+	display: block;
+	background: #fff;
+    background: rgb(0, 0, 0,);
+    width: 100%;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid #757575;
+}
+
+input:focus { outline: none; }
+
+
+/* Label */
+
+label {
+	color: #999;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 10px;
+	transition: all 0.2s ease;
+}
+
+
+/* active */
+
+input:focus ~ label, input.used ~ label {
+	top: -20px;
+  transform: scale(.75); left: -2px;
+	/* font-size: 14px; */
+	color: #4a89dc;
+}
+
+
+/* Underline */
+
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.bar:before, .bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #4a89dc;
+	transition: all 0.2s ease;
+}
+
+.bar:before { left: 50%; }
+
+.bar:after { right: 50%; }
+
+
+/* active */
+
+input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+
+
+/* Highlight */
+
+.highlight {
+	position: absolute;
+	height: 60%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+
+
+/* active */
+
+input:focus ~ .highlight {
+	animation: inputHighlighter 0.3s ease;
+}
+
+
+/* Animations */
+
+@keyframes inputHighlighter {
+	from { background: #4a89dc; }
+	to 	{ width: 0; background: transparent; }
+}
+
+
+/* Button */
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  margin: .3em 0 1em 0;
+  width: 100%;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 16px;
+  line-height: 20px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  letter-spacing: 1px;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #3160B6;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.button:focus { outline: 0; }
+
+
+/* Button modifiers */
+
+.buttonBlue {
+  background: #4a89dc;
+  text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
+}
+
+.buttonBlue:hover { background: #357bd8; }
+
+/* reserv */
+
+.reserv_field {
+    background: white;
+    width: 50%;
+    height: 300px;
+    margin: auto;
+    margin-top: 150px;
+    text-align: center;
+    border-radius: 2%;
+
+}
+
+.reserv_field H2 {
+    padding-top: 80px;
+    color: #757575;
+}
+.reserv_field p{
+    padding-top: 20px;
+    font-size: 1.1rem;
+    color: #757575;
+    font-family: inherit;
+}
+
+/* body services */
+.body_services {
+    background: rgba(0, 0, 0, 0.04);
+}
+.services_wrap {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    background: rgba(0, 0, 0, 0.01);
+}
+.service {
+    display: flex;
+    padding-bottom: 70px;
+    flex-wrap: wrap;
+}
+.service_info a {
+    color: #343a40;
+}
+.service_img {
+    width: 100%;
+}
+.service_img img {
+    min-height: 180px;
+    max-height: 180px;
+    max-width: 100%;
+    object-fit: cover;
+}
+.service_info h3 {
+    padding: 15px 0;
+}
+.service_info p {
+    font-size: 0.9rem;
+    color: #696969;
+}
+
+.service_price {
+    list-style: none;
+    color: #0000009e;
+    padding-left: 0;
+    padding-top: 50px;
+}
+.service_price ul li{
+    padding: 5px 0;
+}
+.sec_service {
+    max-height: 1500px;
+}
+
+.google_maps {
+    width: 100%;
+    height: 500px;
+    padding-bottom: 50px;
+}
+.footer {
+    width: 100%;
+    min-height: 200px;
+    background-color: #212529;
+    position: absolute;
+    margin-top: 200px;
+}
+}
+.footer_wrap {
+    display: flex;
+}
+.footer_list {
+    color: #ddd;
+    padding: 30px 0;
+    margin-left: 20px;
+}
+.footer-left {
+    border-right: 1px #ddd solid;
+    height: 100%;
+}
+.footer-logo {
+    padding: 30px 0;
+    font-family: 'Dancing Script', cursive;
+    color: #ddd;
+    font-size: 2.4rem;
+    padding-bottom: 15px;
+}
+.footer_soc {
+    display: flex;
+    list-style: none;
+    padding: 20px;
+}
+.footer_soc img {
+    height: 40px;
+    padding: 0 10px;
+}
+.footer-pages {
+    list-style: none;
+}
+.footer-pages a,
+.footer-pages a:hover{
+    color: #ddd;
+}
+.footer-pages li {
+    padding: 5px 0;
+}

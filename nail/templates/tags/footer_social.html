@@ -1,0 +1,13 @@
+              {% for social in social %}
+                <ul class="footer_soc">
+                    {% if social.telegram %}
+                    <li><a class="instagram" href="{{social.telegram}}"><img src="../images/soc_ico/telegram.png"></a></li>
+                    {% endif %}
+                    {% if social.insta %}
+                    <li><a class="telegram" href="{{social.insta}}"><img src="../images/soc_ico/insta.png"></a></li>
+                    {% endif %}
+                    {% if social.facebook %}
+                    <li><a class="facebook" href="{{social.facebook}}"><img src="../images/soc_ico/facebook.png"></a></li>
+                    {% endif %}
+                </ul>
+              {% endfor %}

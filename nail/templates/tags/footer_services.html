@@ -1,0 +1,7 @@
+<ul style="list-style:none; padding-left:0;">
+    {% for services in services %}
+    <li style="padding:5px 0;">
+        <a href="{{services.url}}" style="color:#ddd;">{{services.name}}</a>
+    </li>
+    {% endfor %}
+</ul>

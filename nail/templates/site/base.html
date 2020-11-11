@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+<section>
+ <header class="bg">
+{% include 'include/header.html' %}
+    {% for header in header_list %}
+    <div class="head_info" >
+        <div class="row">
+            <div class="container" style="max-width:1350px;">
+
+            <div class="col-md-6 head_text">
+                <span class="h-title">{{header.title}}</span>
+                <p class="h-descr">{{header.description}}</p>
+                 <span class="h-content" style="font-size:1.2rem;">{{header.content}}
+                 </span>
+            </div>
+
+            <div class="col-md-12">
+                <ul class="h-soc">
+                    {% if header.telegram %}
+                    <li><a class="instagram" href="{{header.telegram}}"><img src="../images/soc_ico/telegram.png"></a></li>
+                    {% endif %}
+                    {% if header.insta %}
+                    <li><a class="telegram" href="{{header.insta}}"><img src="../images/soc_ico/insta.png"></a></li>
+                    {% endif %}
+                    {% if header.facebook %}
+                    <li><a class="facebook" href="{{header.facebook}}"><img src="../images/soc_ico/facebook.png"></a></li>
+                    {% endif %}
+                </ul>
+            </div>
+
+             </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+</header>
+</section>
+{% endblock header %}
+
+
+{% block content %}
+    {% for header in header_list %}
+
+<section id="body_reserv">
+    <div class="body_wrap">
+        <div class="container">
+            <div class="col-md-12 body_center">
+                <form class="form"  action="{% url 'reserv_form' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form_text">
+                             <center>
+                        <p>зарезервировать</p>
+                        <h2>Сделайте запись</h2>
+                            </center>
+                    </div>
+                      <div class="group">
+                        <input type="text" name="name" placeholder="Имя">
+                      </div>
+                      <div class="group">
+                        <input type="text" name="phone" placeholder="Номер телефона">
+                      </div>
+                      <div class="group">
+                        <input type="date" name="time" style="color:#696969;" placeholder="На какое число">
+
+                      </div>
+                      <div class="group">
+                        <input type="text" name="description" placeholder="Доп.инфо(не обязательно)">
+                      </div>
+
+                      <button type="submit" class="button buttonBlue">Отправить
+                        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+                      </button>
+                   </form>
+                <div class="img_wrap">
+                    <img src="../images/1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="sec_service">
+    <div class="body_services">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="services_wrap">
+                    <p style="color:#757575;">Услуги</p>
+                </div>
+                <hr style="width: 30%;margin-top:-20px">
+            </div>
+        </div>
+        <div class="services_cont" style="display:flex;padding-top:40px;">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="service">
+                        {% for service in header.get_services %}
+                        <div class="col-md-3 col-sm-6 col-xsm-12">
+                            <center>
+                            <div class="service_cont">
+                                <div class="service_img">
+                                     <a href="{{service.url}}">
+                                        <img src="{{service.picture.url}}" alt="">
+                                     </a>
+                                </div>
+
+                                <div class="service_info">
+                                     <center>
+                                    <a href="{{service.url}}">
+                                        <h3>{{ service.name }}</h3>
+                                    </a>
+                                    <p>{{ service.content|slice:":75"|safe }}</p>
+                                     </center>
+                                </div>
+
+                            </div>
+                            </center>
+                    </div>
+                        {% endfor %}
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>
+<section class="seс_insta ">
+    <div class="col-md-12">
+        <div class="container">
+                <div class="services_wrap">
+                    <p style="color:#757575;">Работы</p></div>
+        </div>
+        <div class="col-md-12">
+            <div class="insta_album">
+                                    <div id="instafeed">
+<script>
+    (function ($) {
+        $(window).on('load', function () {
+            $.instagramFeed({
+                'username': 'macao_nails', //Имя пользователя
+                'container': "#instafeed", //Контейнер для изображений
+                'display_profile': false, //Отображение профиля
+                'display_biography': false, //Отображение биографии
+                'display_gallery': true, //Отображение галереи
+                'styling': true, //Стандартные стили библиотеки
+                'items': 8, //Количество изображений в галереи
+                'items_per_row': 4, //Количество изображений в ряд
+                'margin': 0.5 //Отступ между изображениями
+            });
+        });
+    })(jQuery);
+</script>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endfor %}
+{% endblock content %}
