@@ -80,6 +80,10 @@ section {
     color: #f9f9f9;
 
 }
+.logo a:hover{
+    color: #ddd;
+    text-decoration: none;
+    }
 .bg {
     background-image: url('../images/bg1.jpg');
     background-position:center;
@@ -402,9 +406,12 @@ input:focus ~ .highlight {
     padding-bottom: 70px;
     flex-wrap: wrap;
 }
-.service_info a {
+.service_info a{
     color: #343a40;
 }
+.service_info a:hover{
+    color:#343a40;
+    }
 .service_img {
     width: 100%;
 }
